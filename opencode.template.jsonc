@@ -1,0 +1,104 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "obsidian": {
+      "type": "local",
+      "command": ["npx", "-y", "@bitbonsai/mcpvault"],
+      "args": ["C:\\Users\\YOUR_USER\\Documents\\Obsidian Vault"],
+      "enabled": true
+    },
+    "playwright": {
+      "type": "local",
+      "command": ["node", "C:\\Users\\YOUR_USER\\.config\\opencode\\mcp-servers\\playwright\\index.js"],
+      "enabled": true
+    },
+    "stitch": {
+      "type": "remote",
+      "url": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "YOUR_GOOGLE_API_KEY"
+      },
+      "enabled": true
+    },
+    "trello": {
+      "type": "local",
+      "command": ["node", "C:\\Users\\YOUR_USER\\AppData\\Local\\Temp\\opencode\\trello-mcp-server.mjs"],
+      "environment": {
+        "TRELLO_KEY": "YOUR_TRELLO_KEY",
+        "TRELLO_TOKEN": "YOUR_TRELLO_TOKEN"
+      },
+      "enabled": true
+    },
+    "azure-devops": {
+      "type": "local",
+      "command": ["npx", "-y", "@azure-devops/mcp", "YOUR_AZURE_DEVOPS_PROJECT"],
+      "environment": {
+        "AZURE_DEVOPS_EXT_PAT": "YOUR_AZURE_DEVOPS_PAT"
+      },
+      "enabled": true
+    },
+    "supabase": {
+      "type": "local",
+      "command": ["npx", "-y", "@supabase/mcp-server-supabase@latest", "--access-token", "YOUR_SUPABASE_PAT"],
+      "enabled": true
+    },
+    "github": {
+      "type": "local",
+      "command": ["npx", "-y", "@modelcontextprotocol/server-github"],
+      "environment": {
+        "GITHUB_TOKEN": "YOUR_GITHUB_TOKEN"
+      },
+      "enabled": true
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "vercel": {
+      "type": "remote",
+      "url": "https://mcp.vercel.com",
+      "headers": {
+        "Authorization": "Bearer YOUR_VERCEL_TOKEN"
+      },
+      "enabled": true
+    }
+  },
+  "provider": {
+    "openrouter": {
+      "env": ["OPENROUTER_API_KEY"]
+    }
+  },
+  "agent": {
+    "qwen3-coder": {
+      "model": "openrouter/qwen/qwen3-coder:free",
+      "mode": "subagent",
+      "description": "Código, 262K contexto. Features, refactors, fixes, tareas técnicas."
+    },
+    "nemotron-reasoning": {
+      "model": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+      "mode": "subagent",
+      "description": "Razonamiento, debugging complejo."
+    },
+    "llama": {
+      "model": "openrouter/meta-llama/llama-3.3-70b-instruct:free",
+      "mode": "subagent",
+      "description": "Creatividad, texto, brainstorming, copywriting."
+    },
+    "openrouter-free": {
+      "model": "openrouter/free",
+      "mode": "subagent",
+      "description": "Router automático. Elige el mejor modelo gratis según la tarea."
+    },
+    "opencode-nemotron": {
+      "model": "opencode/nemotron-3-ultra-free",
+      "mode": "subagent",
+      "description": "Nemotron 3 Ultra, 1M contexto. Tareas grandes."
+    },
+    "kimi-ui": {
+      "model": "openrouter/moonshotai/kimi-k2.6:free",
+      "mode": "subagent",
+      "description": "Kimi K2.6, 262K ctx. UI/UX, CSS, frontend, interfaces visuales."
+    }
+  }
+}
