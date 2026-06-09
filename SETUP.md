@@ -71,10 +71,16 @@ Se instalan en `~/.agents/skills/` (o la ruta que use tu cliente).
 
 ### Instalación
 
+Los skills ya están incluidos en `skills/` del repositorio.
+Solo hay que copiarlos a la ubicación que espera tu cliente:
+
 ```bash
-# Skills disponibles en este repositorio:
-# (descargar del source correspondiente o copiar de ~/.agents/skills/)
-#
+# Para opencode:
+cp -r skills/* ~/.agents/skills/
+
+# Para Claude Code:
+cp -r skills/* ~/.claude/skills/
+
 # Para cargar un skill durante una sesión, el asistente usa:
 #   skill(name="nombre-del-skill")
 ```

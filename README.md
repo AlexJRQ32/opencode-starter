@@ -53,6 +53,12 @@ opencode
 | Routing de modelos | `model-router` |
 | Optimizar tokens | `token-efficiency` |
 
+### Instalación de skills
+Los skills están incluidos en `skills/`:
+```bash
+cp -r skills/* ~/.agents/skills/
+```
+
 ## Obsidian + Memoria Persistente
 
 Este setup incluye un sistema Zettelkasten híbrido para memoria persistente entre sesiones:

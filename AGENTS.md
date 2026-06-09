@@ -100,7 +100,9 @@ En Obsidian los wikilinks usan `/` como separador de rutas, incluso en Windows. 
 ### 📄 Un archivo por día por carpeta
 `YYYY-MM-DD-descripcion.md`. Leer → append si existe, crear si no.
 
-## Skills — Carga según tipo de trabajo
+## Skills (incluidos en `skills/` del repo)
+
+Para instalar: `cp -r skills/* ~/.agents/skills/`
 
 | Skill | Para qué sirve |
 |-------|---------------|
