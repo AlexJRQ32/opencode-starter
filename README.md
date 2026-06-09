@@ -40,6 +40,19 @@ opencode
 | opencode-nemotron | Nemotron 3 Ultra | Tareas grandes |
 | kimi-ui | Kimi K2.6 | UI/UX, frontend |
 
+## Skills por tipo de trabajo
+
+| Trabajo | Skills |
+|---------|--------|
+| UI/UX, landing pages | `frontend-design`, `design-taste-frontend`, `impeccable`, `ui-ux-pro-max`, `emil-design-eng` |
+| Auditoría de diseño | `impeccable`, `web-design-guidelines` |
+| React / Next.js | `vercel-react-best-practices`, `vercel-composition-patterns` |
+| Deploy Vercel | `vercel-cli-with-tokens` |
+| Configurar opencode | `customize-opencode` |
+| Memoria persistente | `obsidian-vault` |
+| Routing de modelos | `model-router` |
+| Optimizar tokens | `token-efficiency` |
+
 ## Obsidian + Memoria Persistente
 
 Este setup incluye un sistema Zettelkasten híbrido para memoria persistente entre sesiones:

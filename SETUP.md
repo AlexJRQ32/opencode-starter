@@ -50,13 +50,42 @@ el setup completo desde este template siguiendo estos pasos:
 3. Copiar `AGENTS.md` a `~/.config/opencode/AGENTS.md`
 4. Ajustar la ruta del vault en AGENTS.md
 
-## Fase 3: Verificación
+## Fase 3: Skills — Instalar según tipo de trabajo
+
+Los skills son instrucciones especializadas que el asistente carga según la tarea.
+Se instalan en `~/.agents/skills/` (o la ruta que use tu cliente).
+
+### Por tipo de trabajo
+
+| Tipo de trabajo | Skills recomendados |
+|----------------|-------------------|
+| **UI/UX, landing pages, portfolios** | `frontend-design`, `design-taste-frontend`, `impeccable`, `ui-ux-pro-max`, `emil-design-eng` |
+| **Auditoría de diseño, revisión** | `impeccable`, `web-design-guidelines` |
+| **React / Next.js performance** | `vercel-react-best-practices`, `vercel-composition-patterns` |
+| **Component library / refactor** | `vercel-composition-patterns` |
+| **Deploy a Vercel** | `vercel-cli-with-tokens` |
+| **Configurar opencode** | `customize-opencode` |
+| **Optimización de tokens** | `token-efficiency` (fondo, siempre activo) |
+| **Routing de modelos** | `model-router` (fondo, siempre activo si hay varios modelos) |
+| **Memoria persistente** | `obsidian-vault` |
+
+### Instalación
+
+```bash
+# Skills disponibles en este repositorio:
+# (descargar del source correspondiente o copiar de ~/.agents/skills/)
+#
+# Para cargar un skill durante una sesión, el asistente usa:
+#   skill(name="nombre-del-skill")
+```
+
+## Fase 4: Verificación
 
 1. Ejecutar el script de verificación de AGENTS.md
 2. Confirmar que opencode inicia sin errores
 3. Probar cada MCP server con un comando básico
 
-## Fase 4: Primer uso
+## Fase 5: Primer uso
 
 1. Pedir al asistente que cree la primera nota de sesión
 2. Confirmar que aparece en el índice mensual

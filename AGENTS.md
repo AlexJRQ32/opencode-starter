@@ -100,6 +100,27 @@ En Obsidian los wikilinks usan `/` como separador de rutas, incluso en Windows. 
 ### 📄 Un archivo por día por carpeta
 `YYYY-MM-DD-descripcion.md`. Leer → append si existe, crear si no.
 
+## Skills — Carga según tipo de trabajo
+
+| Skill | Para qué sirve |
+|-------|---------------|
+| `obsidian-vault` | Gestión del vault Obsidian |
+| `model-router` | Dispatch automático de modelos según la tarea |
+| `token-efficiency` | Minimizar tokens, respuestas concisas |
+| `gen-report-daily` | Generar reporte .docx diario (Task Scheduler) |
+| `ui-ux-pro-max` | UI/UX design intelligence con base de datos |
+| `frontend-design` | Interfaces frontend production-grade |
+| `design-taste-frontend` | Landing pages, portfolios, anti-slop |
+| `emil-design-eng` | Filosofía de UI polish (Emil Kowalski) |
+| `impeccable` | Diseño, auditoría, pulido, animación |
+| `web-design-guidelines` | Auditoría contra guías de interfaz web |
+| `vercel-react-best-practices` | React/Next.js performance |
+| `vercel-composition-patterns` | Patrones de composición React |
+| `vercel-cli-with-tokens` | Deploy a Vercel con tokens |
+| `customize-opencode` | Configurar opencode mismo |
+
+Carga: `skill(name="nombre-del-skill")`
+
 ## Herramientas MCP
 - `mcpvault_search(query)` / `mcpvault_read_note(path)` / `mcpvault_write_note(path, content)`
 - `mcpvault_list_files(path)` / `mcpvault_list_all_tags()` / `mcpvault_get_vault_stats()`
