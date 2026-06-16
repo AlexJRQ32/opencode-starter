@@ -1,0 +1,46 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/qwen3.6-plus-free",
+  "mcp": {
+    "obsidian": { "type": "local", "command": ["npx", "-y", "@bitbonsai/mcpvault@latest", "C:/Users/roble/Documents/Obsidian Vault"], "enabled": true },
+    "playwright": { "type": "local", "command": ["node", "C:\\Users\\roble\\.config\\opencode\\mcp-servers\\playwright\\index.js"], "environment": { "PLAYWRIGHT_BROWSERS_PATH": "C:\\Users\\roble\\.cache\\ms-playwright" }, "enabled": true },
+    "stitch": { "type": "remote", "url": "https://stitch.googleapis.com/mcp", "headers": { "X-Goog-Api-Key": "AQ.Ab8RN6LUbHnYMRzQ9AYE8eJGwIdzUAcHv83DdD-XZqPfABBcrg" }, "enabled": true },
+    "azure-devops": { "type": "local", "command": ["npx", "-y", "@azure-devops/mcp", "DesarrolloAplicacionesScrumTeam"], "environment": { "AZURE_DEVOPS_EXT_PAT": "G1GiNiQs7l5poqgbDE8EpZ2MwKpCC6whn4G01MeXpwPGfCa6fX6SJQQJ99CFACAAAAAbzLQhAAASAZDO1ibl" }, "enabled": true },
+    "supabase": { "type": "local", "command": ["npx", "-y", "@supabase/mcp-server-supabase@latest", "--access-token", "sbp_ff2a057bd30e8787825609cfb4dbf93f53147b34"], "enabled": true },
+    "github": { "type": "local", "command": ["npx", "-y", "@modelcontextprotocol/server-github"], "environment": { "GITHUB_TOKEN": "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" }, "enabled": true },
+    "sequential-thinking": { "type": "local", "command": ["npx", "-y", "@modelcontextprotocol/server-sequential-thinking"], "enabled": true },
+    "filesystem": { "type": "local", "command": ["npx", "-y", "@modelcontextprotocol/server-filesystem", "C:\\Users\\roble\\Documents", "C:\\Users\\roble\\.config\\opencode", "C:\\Users\\roble\\.agents", "C:\\Users\\roble\\OneDrive\\Documentos\\Archivos OpenCode"], "enabled": true },
+    "context7": { "type": "remote", "url": "https://mcp.context7.com/mcp", "enabled": true },
+    "vercel": { "type": "remote", "url": "https://mcp.vercel.com", "headers": { "Authorization": "Bearer vcp_6Q4GdnYkYBtXa6oKydxkpLDoTgwzleb88Wlvqh6dceWK6Zd5NZ4eTpQv" }, "enabled": true }
+  },
+  "agent": {
+    "opencode-nemotron": { "model": "opencode/nemotron-3-ultra-free", "mode": "subagent", "description": "Nemotron 3 Ultra (1M contexto). Tareas grandes." },
+    "deepseek": { "model": "opencode/deepseek-v4-flash-free", "mode": "subagent", "description": "DeepSeek V4 Flash. Codigo, analisis, debugging." },
+    "qwen-coder": { "model": "opencode/qwen3.6-plus-free", "mode": "subagent", "description": "Qwen3.6 Plus. Codigo, features, refactors." },
+    "grok-code": { "model": "opencode/grok-code-fast-1-free", "mode": "subagent", "description": "Grok Code Fast 1. Codigo rapido, explicaciones." },
+    "glm": { "model": "opencode/glm-5-free", "mode": "subagent", "description": "GLM 5. Proposito general, analisis, creatividad." },
+    "ring": { "model": "opencode/ring-2.6-1t-free", "mode": "subagent", "description": "Ring 2.6 1T. Razonamiento, tareas complejas." },
+    "gpt-nano": { "model": "opencode/gpt-5-nano", "mode": "subagent", "description": "GPT 5 Nano. Tareas rapidas y ligeras." },
+    "minimax": { "model": "opencode/minimax-m2.5-free", "mode": "subagent", "description": "MiniMax M2.5. Proposito general." }
+  },
+  "skills": {},
+  "plugin": [
+    "oh-my-opencode", "opencode-vibeguard", "opencode-websearch-cited", "opencode-pty",
+    "opencode-wakatime", "opencode-worktree", "opencode-background-agents",
+    "opencode-supermemory", "opencode-goal-plugin", "opencode-conductor", "opencode-quota",
+    "opencode-snip", "opencode-claude-memory", "opencode-working-memory", "opencode-swarm",
+    "opencode-orchestrator", "opencode-hive", "opencode-lazy", "opencode-codeindex",
+    "opencode-models-discovery", "opencode-copilot-plugin", "@openspoon/subtask2",
+    "@plannotator/opencode", "@hueyexe/opencode-ensemble", "@capybearista/opencode-agents-loader",
+    "opencode-dux", "opencode-agent-trace-plugin",     "opencode-mem"
+  ],
+  "disabled_providers": ["ollama", "openrouter"],
+  "provider": {
+    "ollama": {
+      "name": "Ollama",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": { "baseURL": "http://localhost:11434/v1" },
+      "models": { "llama3.2": { "name": "Llama 3.2 Local" } }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+CreateObject("WScript.Shell").Run "powershell.exe -NoProfile -ExecutionPolicy Bypass -File """ & CreateObject("WScript.Shell").ExpandEnvironmentStrings("USERPROFILE") & "\.config\opencode\scripts\moodle-to-trello.ps1""", 0, False
